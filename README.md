@@ -1,3 +1,5 @@
 # ospace
-# ospace-mobile untuk versi mobile
-# ospace untuk versi desktop 
+
+ospace-mobile untuk versi mobile
+
+ospace untuk versi desktop 
