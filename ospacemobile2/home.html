@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+	<title>Home</title>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script src="https://unpkg.com/nouislider@10.0.0/distribute/nouislider.min.js"></script>
+		<script src="https://unpkg.com/wnumb@1.1.0"></script>
+		<link rel="stylesheet" href="https://unpkg.com/nouislider@10.0.0/distribute/nouislider.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/stylemobile.css">
+	</head>
+	<body>
+		<div class="wrapper text-center">
+			<nav id="sidebarDrawers" class="active">
+				<div class="container splash2 text-justify"><br>
+					<nav class="nav flex-column">
+						<a class="nav-link" href="#">
+							<div class="round-username rounded-circle">
+								<img src="http://cdn2.tstatic.net/suryamalang/foto/bank/images/albert-einstein-arthur-sasse_20160202_131247.jpg">
+							</div>
+							Zain Fikri H
+						</a>
+						<a class="nav-link nav-link-margin" href="#">HOME</a>
+						<div id="accordionPost" class="post-accordion" data-children=".item">
+							<div class="item item-post">
+								<a data-toggle="collapse" data-parent="#accordionPost" href="#accordionPost1" role="button" aria-expanded="true" aria-controls="accordionPost1">
+									<div>POST<i class="fa fa-caret-down"></i></div>
+								</a>
+								<div id="accordionPost1" class="collapse" role="tabpanel">
+									<a class="nav-link nav-link-margin2" href="#">SCHOLARSHIP</a>
+									<a class="nav-link nav-link-margin2" href="#">COMPETITION</a>
+									<a class="nav-link nav-link-margin2" href="#">EVENT</a>
+									<a class="nav-link nav-link-margin2" href="#">INTERNSHIP</a>
+									<a class="nav-link nav-link-margin2" href="#">CAREER</a>
+								</div>
+							</div>
+						</div>
+						<a class="nav-link nav-link-margin" href="#">ABOUT</a>
+						<a class="nav-link nav-link-margin" href="#">LOG OUT</a>
+					</nav>
+				</div>
+			</nav>
+			
+			<nav id="sidebarFilters" class="active">
+				<div class="container splash2 filter">
+					<h5 class="font-roboto-reg welcome-sign">FILTER<a id="cancelFilter" class="float-right">
+					<img src="assets/logo/ico_close2.svg" class="img-fluid img-close"></a></h5>
+					<form action="#">
+						<div class="row">
+							<div class="col-12">
+								<hr>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<h5>University</h5>
+							</div>
+							<div class="col-12">
+								<input type="text" class="form-control search-input2" placeholder="Search University">
+							</div>
+							<div class="alert alert-search-box alert-dismissable">
+								<a href="#" class="close close-search-box" data-dismiss="alert" aria-label="close">&times;</a>
+								Brawijaya
+							</div>
+							<div class="alert alert-search-box alert-dismissable">
+								<a href="#" class="close close-search-box" data-dismiss="alert" aria-label="close">&times;</a>
+								Padjajaran
+							</div>
+							<div class="alert alert-search-box alert-dismissable">
+								<a href="#" class="close close-search-box" data-dismiss="alert" aria-label="close">&times;</a>
+								Diponegoro
+							</div>
+							<div class="alert alert-search-box alert-dismissable">
+								<a href="#" class="close close-search-box" data-dismiss="alert" aria-label="close">&times;</a>
+								Bina Nusantara
+							</div><br>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<hr>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<h5>Month</h5>
+							</div>
+							<div class="col-md-12">
+								<select class="custom-select custom-select-filter" id="inputGroupSelect01">
+									<option value="0" selected>All Month</option>
+									<option value="1">January</option>
+									<option value="2">February</option>
+									<option value="3">March</option>
+								</select>
+							</div><br>
+						</div><br>
+						
+						<div class="row">
+							<div class="col-12">
+								<hr>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<h5>Awards</h5>
+							</div>
+							<br>
+							<div class="col-10 offset-1"><br><br>
+								<div id="keypress" class="noUi-target noUi-rtl noUi-horizontal"></div>
+								<div class="col-md-6">
+									<input id="input-with-keypress-0" type="text" placeholder="Min">
+								</div>
+								<div class="col-md-6">
+									<input id="input-with-keypress-1" type="text" placeholder="Max">
+								</div>
+								<script>
+								var keypressSlider = document.getElementById('keypress');
+								var input0 = document.getElementById('input-with-keypress-0');
+								var input1 = document.getElementById('input-with-keypress-1');
+								var inputs = [input0, input1];
+								noUiSlider.create(keypressSlider, {
+								start: [0, 1000],
+								connect: true,
+								tooltips: [wNumb({ decimals: 0, postfix:'K' }), wNumb({ decimals: 0, postfix:'K' })],
+								range: {
+								'min': 0,
+								'max': 1000
+								}
+								});
+								keypressSlider.noUiSlider.on('update', function( values, handle ) {
+								inputs[handle].value = Math.round(values[handle]);
+								});
+								</script>
+								<script>
+								function setSliderHandle(i, value) {
+									var r = [null,null];
+									r[i] = value;
+									keypressSlider.noUiSlider.set(r);
+								}
+								// Listen to keydown events on the input field.
+								inputs.forEach(function(input, handle) {
+									input.addEventListener('change', function(){
+										setSliderHandle(handle, this.value);
+									});
+									input.addEventListener('keydown', function( e ) {
+										var values = keypressSlider.noUiSlider.get();
+										var value = Number(values[handle]);
+										// [[handle0_down, handle0_up], [handle1_down, handle1_up]]
+										var steps = keypressSlider.noUiSlider.steps();
+										// [down, up]
+										var step = steps[handle];
+										var position;
+										// 13 is enter,
+										// 38 is key up,
+										// 40 is key down.
+										switch ( e.which ) {
+											case 13:
+												setSliderHandle(handle, this.value);
+												break;
+											case 38:
+												// Get step to go increase slider value (up)
+												position = step[1];
+												// false = no step is set
+												if ( position === false ) {
+													position = 1;
+												}
+												// null = edge of slider
+												if ( position !== null ) {
+													setSliderHandle(handle, value + position);
+												}
+												break;
+											case 40:
+												position = step[0];
+												if ( position === false ) {
+													position = 1;
+												}
+												if ( position !== null ) {
+													setSliderHandle(handle, value - position);
+												}
+												break;
+										}
+									});
+								});
+								</script>
+							</div><br>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<hr>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<button type="button" type="submit" id="btn-getstart" class="btn btn-primary btn-get-started">APPLY FILTER</button>
+					</div>
+				</div>
+			</nav>
+			<div id="content" class="home-page">
+				<div class="header-home">
+					<button type="button" id="sidebarCollapseDrawer" class="btn-none float-left icon-home"><img class="width-icon-about" src="assets/logo/ico_menu.svg"></button><span class="font-size-18 home-title"> OSPACE </span><button type="button" id="sidebarCollapseFilter" class="btn-none float-right icon-home"><img class="width-icon-home" src="assets/logo/ico_filter.png"></button>
+				</div>
+				<nav class="wrapper-tabs">
+					<div class="nav nav-tabs list" id="nav-tab" role="tablist">
+						<a class="nav-item nav-link active" id="nav-scholarship-tab" data-toggle="tab" href="#nav-scholarship" role="tab" aria-controls="nav-scholarship" aria-selected="true">Scholarship</a>
+						<a class="nav-item nav-link" id="nav-competition-tab" data-toggle="tab" href="#nav-competition" role="tab" aria-controls="nav-competition" aria-selected="false">Competition</a>
+						<a class="nav-item nav-link" id="nav-event-tab" data-toggle="tab" href="#nav-event" role="tab" aria-controls="nav-event" aria-selected="false">Event</a>
+						<a class="nav-item nav-link" id="nav-internship-tab" data-toggle="tab" href="#nav-internship" role="tab" aria-controls="nav-internship" aria-selected="false">Internship</a>
+						<a class="nav-item nav-link" id="nav-career-tab" data-toggle="tab" href="#nav-career" role="tab" aria-controls="nav-career" aria-selected="false">Career</a>
+					</div>
+				</nav>
+				<div class="tab-content" id="nav-tabContent">
+					<div class="tab-pane fade show active" id="nav-scholarship" role="tabpanel" aria-labelledby="nav-scholarship-tab">
+						<div class="card card-home2">
+							<div class="card-body card-body-space">
+								<h6 class="card-title text-left card-title-space">Pertamina Beasiswa Sobat Bumi <br>
+								<span class="float-left font-roboto">Undergraduate</span><span class="float-right font-roboto">Domestic</span><br>
+								<span class="float-left font-roboto">26 December 2018</span><span class="float-right font-roboto">Rp. 400.000</span></h6><br>
+								<div class="card-body-imgspace">
+									<img src="assets/logo/pertamina_copy.svg" class="img-fluid text-center img-space">
+								</div>
+							</div>
+						</div>
+						<div class="card card-home2">
+							<div class="card-body card-body-space">
+								<h6 class="card-title text-left card-title-space">Beasiswa Djarum Plus <br>
+								<span class="float-left font-roboto">Undergraduate</span><span class="float-right font-roboto">Domestic</span><br>
+								<span class="float-left font-roboto">26 December 2018</span><span class="float-right font-roboto">Rp. 400.000</span></h6><br>
+								<div class="card-body-imgspace">
+									<img src="assets/logo/logo-beasiswa-plus.png" class="img-fluid text-center img-space">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="nav-competition" role="tabpanel" aria-labelledby="nav-competition-tab">
+						<div class="card card-home2">
+							<div class="card-body card-body-space">
+								<h6 class="card-title text-left card-title-space">Brawijaya English Tournament <br>
+								<span class="float-left font-roboto">Undergraduate</span><span class="float-right font-roboto">Malang</span><br>
+								<span class="float-left font-roboto">26 December 2018</span><span class="float-right font-roboto">Rp. 400.000</span></h6><br>
+								<div class="card-body-imgspace">
+									<img src="assets/logo/pertamina_copy.svg" class="img-fluid text-center img-space">
+								</div>
+							</div>
+						</div>
+						<div class="card card-home2">
+							<div class="card-body card-body-space">
+								<h6 class="card-title text-left card-title-space">Brawijaya English Tournament <br>
+								<span class="float-left font-roboto">Undergraduate</span><span class="float-right font-roboto">Malang</span><br>
+								<span class="float-left font-roboto">26 December 2018</span><span class="float-right font-roboto">Rp. 400.000</span></h6><br>
+								<div class="card-body-imgspace">
+									<img src="assets/logo/pertamina_copy.svg" class="img-fluid text-center img-space">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="nav-event" role="tabpanel" aria-labelledby="nav-event-tab">
+						<div class="card card-home2">
+							<div class="card-body card-body-space">
+								<h6 class="card-title text-left card-title-space">Dies Natalis FILKOM<br>
+								<span class="float-left font-roboto">Malang</span><span class="float-right font-roboto">26 December 2018</span><br>
+								<span class="float-left font-roboto second-tier">Rp. 400.000</span><span class="float-right font-roboto second-tier">Paid Event</span></h6><br>
+								<div class="card-body-imgspace">
+									<img src="assets/logo/pertamina_copy.svg" class="img-fluid text-center img-space">
+								</div>
+							</div>
+						</div>
+						<div class="card card-home2">
+							<div class="card-body card-body-space">
+								<h6 class="card-title text-left card-title-space">Dies Natalis FILKOM<br>
+								<span class="float-left font-roboto">Malang</span><span class="float-right font-roboto">26 December 2018</span><br>
+								<span class="float-left font-roboto">Paid Event</span><span class="float-right font-roboto">Rp.400.000</span></h6><br>
+								<div class="card-body-imgspace">
+									<img src="assets/logo/pertamina_copy.svg" class="img-fluid text-center img-space">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="nav-internship" role="tabpanel" aria-labelledby="nav-internship-tab">
+						<div class="card card-home2">
+							<div class="card-body card-body-space">
+								<h6 class="card-title text-left card-title-space">Valve<br>
+								<span class="float-left font-roboto">Malang</span><span class="float-right font-roboto">26 December 2018</span><br>
+								<span class="float-left font-roboto">Rp. 400.000</span><span class="float-right font-roboto">Manager</span></h6><br>
+								<div class="card-body-imgspace">
+									<img src="assets/logo/pertamina_copy.svg" class="img-fluid text-center img-space">
+								</div>
+							</div>
+						</div>
+						<div class="card card-home2">
+							<div class="card-body card-body-space">
+								<h6 class="card-title text-left card-title-space">Valve<br>
+								<span class="float-left font-roboto">Malang</span><span class="float-right font-roboto">26 December 2018</span><br>
+								<span class="float-left font-roboto">Rp. 400.000</span><span class="float-right font-roboto">Manager</span></h6><br>
+								<div class="card-body-imgspace">
+									<img src="assets/logo/pertamina_copy.svg" class="img-fluid text-center img-space">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="nav-career" role="tabpanel" aria-labelledby="nav-career-tab">
+						<div class="card card-home2">
+							<div class="card-body card-body-space">
+								<h6 class="card-title text-left card-title-space">Microsoft<br>
+								<span class="float-left font-roboto">Malang</span><span class="float-right font-roboto">26 December 2018</span><br>
+								<span class="float-left font-roboto">Rp. 400.000</span><span class="float-right font-roboto">Manager</span></h6><br>
+								<div class="card-body-imgspace">
+									<img src="assets/logo/pertamina_copy.svg" class="img-fluid text-center img-space">
+								</div>
+							</div>
+						</div>
+						<div class="card card-home2">
+							<div class="card-body card-body-space">
+								<h6 class="card-title text-left card-title-space">Microsoft<br>
+								<span class="float-left font-roboto">Malang</span><span class="float-right font-roboto">26 December 2018</span><br>
+								<span class="float-left font-roboto">Rp. 400.000</span><span class="float-right font-roboto">Manager</span></h6><br>
+								<div class="card-body-imgspace">
+									<img src="assets/logo/pertamina_copy.svg" class="img-fluid text-center img-space">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>

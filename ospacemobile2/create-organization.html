@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<title>Sign Up</title>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="assets/css/stylemobile.css">		
+	</head>
+	<body>
+		<div class="splash login-page text-center">
+			<form action="#">
+			<h4 class="font-roboto welcome-sign">Create an account<a href="first.html" class="closelogin float-right">
+				<img src="assets/logo/ico_close.svg" class="img-fluid">
+			</a></h4><br>
+			<div class="row">
+				<div class="col-8 offset-2">
+					<input type="text" class="form-control input-login" placeholder="Username">
+				</div>
+			</div><br>
+			<div class="row">
+				<div class="col-8 offset-2">
+					<input type="password" class="form-control input-login" placeholder="Password">
+				</div>
+			</div><br>
+			<div class="row">
+				<div class="col-8 offset-2">
+					<input type="password" class="form-control input-login" placeholder="Confirm">
+				</div>
+			</div><br>
+			<div class="row">
+				<div class="col-8 offset-2">
+					<input type="email" class="form-control input-login" placeholder="Email">
+				</div>
+			</div><br>
+			<div class="row">
+				<div class="col-8 offset-2">
+					<input type="text" class="form-control input-login" placeholder="Phone">
+				</div>
+			</div>
+			<br>
+			<button type="submit" class="btn btn-first">CREATE ACCOUNT</button>
+			<br>
+			<h6 class="font-roboto color-grey-login">By creating an account you agree to <br>our <a class="link-forgot" href="#">User Agreement</a> and <a class="link-forgot" href="#">Privacy Policy</a></h6><br>
+			<h6 class="font-roboto color-grey-login">or sign in with</h6>
+			<div class="btn-group">
+				<a href="#" class="btn btn-facebook">
+					<i class="fa fa-facebook fa-white"></i>Facebook
+				</a>
+				<a href="#" class="btn btn-google font-roboto-reg">
+					<img src="assets/logo/layer-2.jpg" class="fa-google1">Google
+				</a>
+			</div><br><br>
+			<div class="modal fade modal-logo show" id="modalLogoCenter" tabindex="-1" role="dialog" aria-labelledby="modalLogo" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header modal-header-logo">
+						</div>
+						<h3 class="font-roboto-reg title-insertlogo">INSERT LOGO</h3>
+						<div class="modal-body modal-body-insertlogo text-center">
+							<label class="btn" id="btn-hide">
+								<div class="circle-insertlogo">
+									<h1 class="plus-insert-logo">+
+									<input type="file" class="inputfile" id="customFile" onchange="readURL(this);">
+									</h1>
+									<br><br>
+								</div>
+							</label><br>
+							<img id="logoOrg" src="#" alt="Add cover" class="img-fluid">
+						</div>
+						<div class="modal-footer modal-footer-insertlogo">
+							<button type="button" class="btn btn-done float-left" data-dismiss="modal">DONE</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			</form>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="assets/jquery.mobile.custom.min.js">
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
