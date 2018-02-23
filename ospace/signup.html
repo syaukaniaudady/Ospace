@@ -100,7 +100,7 @@
 							<div class="row">
 								<div class="col-md-8 offset-md-2">
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+										<input class="form-check-input" type="checkbox" value="" id="defaultCheck">
 										<label class="form-check-label lowercase" for="defaultCheck3">
 											I accept terms, conditions and privacy policy.
 										</label>
@@ -118,19 +118,19 @@
 						$("#signupstudent").click(function () {
 							var password = $("#passwordstudent").val();
 							var confirmPassword = $("#passwordstudentconfirm").val();
-							var terms = $("#defaultCheck3:checked").val();
+							var terms = $("#defaultCheck:checked").val();
 							if (password != confirmPassword) {
 									alert("Password tidak sama");
 									return false;
 							}
-							else if (terms == undefined) {
+							if (terms == undefined) {
 								return false;
 							}
 								return true;
 							});
 						});
 						</script>
-						<div class="row">
+						<!-- <div class="row">
 							<div class="col-md-8 offset-md-2">
 								<p class="color-grey-signup font-roboto-reg font-size-14">Sign Up with social media</p>
 								<div class="btn-group">
@@ -142,7 +142,7 @@
 									</a>
 								</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</nav>
@@ -152,14 +152,14 @@
 						<span class="font-size-32 font-roboto-bold">Sign Up</span><span class="border-title-signup"></span><span class="font-size-24 font-roboto color-grey-signup">Organization</span>
 					</div>
 					<div class="card-margin-inside">
-						<form action="daftarweb.php" class="form-signup2" method="post">
+						<form action="daftarweborganization.php" class="form-signup2" method="post">
 						<div class="row">
 							<div class="col-md-8 offset-md-2">
 								Logo
 							<label class="btn">
 								<div class="circle-insertlogo">
-									<h1 class="plus-insert-logo">+
-									<input type="file" class="inputfile" id="customFile">
+									<h1 class="plus-insert-logo">
+									<input type="file" class="inputfile" id="logofile">
 									</h1>
 								</div>
 							</label>
@@ -180,7 +180,7 @@
 								<div class="form-group form-group-signup row">
 									<label for="emailid" class="col-sm-3 col-form-label">Email ID</label>
 									<div class="col-sm-9">
-										<input class="form-control form-signup" type="text" id="emailid">
+										<input class="form-control form-signup" type="text" id="emailidoraganization">
 									</div>
 								</div>
 							</div>
@@ -190,7 +190,7 @@
 								<div class="form-group form-group-signup row">
 									<label for="phoneno" class="col-sm-3 col-form-label">Phone No.</label>
 									<div class="col-sm-9">
-										<input class="form-control form-signup" type="text" id="phoneno">
+										<input class="form-control form-signup" type="text" id="phonenoorganization">
 									</div>
 								</div>
 							</div>
@@ -200,7 +200,7 @@
 								<div class="form-group form-group-signup row">
 									<label for="password" class="col-sm-3 col-form-label">Password</label>
 									<div class="col-sm-9">
-										<input class="form-control form-signup" type="password" id="password">
+										<input class="form-control form-signup" type="password" id="passwordorganization">
 									</div>
 								</div>
 							</div>
@@ -210,7 +210,7 @@
 								<div class="form-group form-group-signup row">
 									<label for="confirm" class="col-sm-3 col-form-label">Confirm</label>
 									<div class="col-sm-9">
-										<input class="form-control form-signup" type="password">
+										<input class="form-control form-signup" type="passwordorganizationconfirm">
 									</div>
 								</div>
 							</div>
@@ -218,7 +218,7 @@
 						<div class="row">
 							<div class="col-md-8 offset-md-2">
 								<div class="form-check">
-									<input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+									<input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
 									<label class="form-check-label lowercase" for="defaultCheck3">
 										I accept terms, conditions and privacy policy.
 									</label>
@@ -227,11 +227,28 @@
 						</div><br>
 						<div class="row">
 							<div class="col-md-8 offset-md-2">
-								<button class="btn btn-purple btn-signup float-right">Sign Up</button>
+								<button class="btn btn-purple btn-signup float-right" id="signuporganization">Sign Up</button>
 							</div>
 						</div>
 						</form><br>
-						<div class="row">
+						<script type="text/javascript">
+						$(function () {
+						$("#signuporganization").click(function () {
+							var passwordo = $("#passwordorganization").val();
+							var confirmPasswordo = $("#passwordorganizationconfirm").val();
+							var termso = $("#defaultCheck2:checked").val();
+							if (passwordo != confirmPasswordo) {
+									alert("Password tidak sama");
+									return false;
+							}
+							if (terms == undefined) {
+								return false;
+							}
+								return true;
+							});
+						});
+						</script>
+						<!-- <div class="row">
 							<div class="col-md-8 offset-md-2">
 								<p class="color-grey-signup font-roboto-reg font-size-14">Sign Up with social media</p>
 								<div class="btn-group">
@@ -243,7 +260,7 @@
 									</label>
 								</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</nav>
