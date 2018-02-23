@@ -46,13 +46,13 @@
 						<span class="font-size-32 font-roboto-bold">Sign Up</span><span class="border-title-signup"></span><span class="font-size-24 font-roboto color-grey-signup">Student</span>
 					</div>
 					<div class="card-margin-inside">
-						<form action="#" class="form-signup2">
+						<form action="daftarwebstudent.php" class="form-signup2" method="post">
 							<div class="row">
 								<div class="col-md-8 offset-md-2">
 									<div class="form-group form-group-signup row">
 										<label for="organization" class="col-sm-3 col-form-label">Name</label>
 										<div class="col-sm-9">
-											<input class="form-control form-signup" type="text">
+											<input class="form-control form-signup" type="text" id="namestudent">
 										</div>
 									</div>
 								</div>
@@ -62,7 +62,7 @@
 									<div class="form-group form-group-signup row">
 										<label for="emailid" class="col-sm-3 col-form-label">Email ID</label>
 										<div class="col-sm-9">
-											<input class="form-control form-signup" type="text">
+											<input class="form-control form-signup" type="text" id="emailidstudent">
 										</div>
 									</div>
 								</div>
@@ -72,7 +72,7 @@
 									<div class="form-group form-group-signup row">
 										<label for="phoneno" class="col-sm-3 col-form-label">Phone</label>
 										<div class="col-sm-9">
-											<input class="form-control form-signup" type="text">
+											<input class="form-control form-signup" type="text" id="phonestudent">
 										</div>
 									</div>
 								</div>
@@ -82,7 +82,7 @@
 									<div class="form-group form-group-signup row">
 										<label for="password" class="col-sm-3 col-form-label">Password</label>
 										<div class="col-sm-9">
-											<input class="form-control form-signup" type="password">
+											<input class="form-control form-signup" type="password" id="passwordstudent">
 										</div>
 									</div>
 								</div>
@@ -92,7 +92,7 @@
 									<div class="form-group form-group-signup row">
 										<label for="confirm" class="col-sm-3 col-form-label">Confirm</label>
 										<div class="col-sm-9">
-											<input class="form-control form-signup" type="password">
+											<input class="form-control form-signup" type="password" id="passwordstudentconfirm">
 										</div>
 									</div>
 								</div>
@@ -109,10 +109,27 @@
 							</div><br>
 							<div class="row">
 								<div class="col-md-8 offset-md-2">
-									<button type="submit" class="btn btn-purple btn-signup float-right">Sign Up</button>
+									<button type="submit" id="signupstudent" class="btn btn-purple btn-signup float-right">Sign Up</button>
 								</div>
 							</div>
 						</form><br>
+						<script type="text/javascript">
+						$(function () {
+						$("#signupstudent").click(function () {
+							var password = $("#passwordstudent").val();
+							var confirmPassword = $("#passwordstudentconfirm").val();
+							var terms = $("#defaultCheck3:checked").val();
+							if (password != confirmPassword) {
+									alert("Password tidak sama");
+									return false;
+							}
+							else if (terms == undefined) {
+								return false;
+							}
+								return true;
+							});
+						});
+						</script>
 						<div class="row">
 							<div class="col-md-8 offset-md-2">
 								<p class="color-grey-signup font-roboto-reg font-size-14">Sign Up with social media</p>
