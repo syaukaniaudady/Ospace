@@ -10,5 +10,8 @@
     function index(){
 			include "index.php";
     }
+    function daftarwebstudent(){
+      
+    }
   }
 ?>
