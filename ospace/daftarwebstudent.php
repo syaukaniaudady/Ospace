@@ -2,6 +2,6 @@
 include "controller.php";
 
 $cont = new controller;
-$cont->insert();
+$cont->daftarwebstudent();
 header();
  ?>
