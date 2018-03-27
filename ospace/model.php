@@ -72,7 +72,7 @@
           return $this->execute($query);
   	}
     public function query($q){
-          $query = mysqli_real_escape_string(parent::__construct(), $q);
+          $query = mysqli_real_escape_string(parent::construct(), $q);
           return $this->execute($q);
     }
   }

@@ -1,9 +1,10 @@
 <?php
-
+include "controller.php";
 include "koneksi.php";
-$query = "SELECT count(*) as total from data_tiket";
-$result=mysqli_query($conn, $query);
-$data=mysqli_fetch_assoc($result);
+$cont = new controller;
+//$query = "SELECT count(*) as total from data_tiket";
+//$result=mysqli_query($conn, $query);
+//$data=mysqli_fetch_assoc($result);
 
 //Meyimpan data ke variabel
 //$no_tiket       = 551 + $data['total'];
