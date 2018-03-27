@@ -40,18 +40,18 @@ if($sabi == 0) {
     echo "<script>alert('Anda sudah mendaftarkan diri sebelumnya !!');history.go(-1);</script>";
 } else {
 
-$tampil = "SELECT * FROM data_tiket";
-$sql = mysqli_query($conn, $tampil);
-while($data = mysqli_fetch_array($sql)) {
-    if($data['nama'] == "kosong"){
-        $no_tiket = $data['no_tiket'];
+// $tampil = "SELECT * FROM data_tiket";
+// $sql = mysqli_query($conn, $tampil);
+// while($data = mysqli_fetch_array($sql)) {
+//     if($data['nama'] == "kosong"){
+//         $no_tiket = $data['no_tiket'];
 //SQL query untuk insert data
     //$query = "INSERT INTO `data_tiket` (`no_tiket`, `nama`, `asal`, `hp`, `soal`, `email` , `tanggal`) VALUES ('$no_tiket', '$firstname', '$asal', '$phone', '$soal', '$email', '$tgl')";
-    $query = "UPDATE data_tiket SET nama='$firstname', asal='$asal', hp='$phone', soal='$soal', email='$email', tanggal='$tgl', status=' ' WHERE no_tiket='$no_tiket'";
-    mysqli_query($conn, $query);
-    break;
-    }
-    }
+    // $query = "UPDATE data_tiket SET nama='$firstname', asal='$asal', hp='$phone', soal='$soal', email='$email', tanggal='$tgl', status=' ' WHERE no_tiket='$no_tiket'";
+    // mysqli_query($conn, $query);
+    // break;
+    // }
+    // }
 //kembali ke halaman index
     echo "<script>alert('Anda telah terdaftar, silahkan melakukan pembayaran dan konfirmasi pembayaran');window.location='index.html'</script>";
 
