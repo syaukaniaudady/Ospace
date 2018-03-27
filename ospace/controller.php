@@ -13,6 +13,7 @@
 		}
     function index(){
 			include "index.php";
-		}
+    }
+    
   }
 ?>
